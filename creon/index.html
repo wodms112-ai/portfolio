@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--라이브러리 파일-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        <!--내파일-->
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <title>크레온</title>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+                <!-- pc버전 ( 마우스를 오버) header에 ->  "menu_pc" -> GNB 열림
+                모바일버전  (클릭) header에 -> "menu_mo" -> GNB 열림 --> 
+            <h1 class="logo"><a href="index.html"><span class="blind">크레온</span></a></h1><!--pc로고-->
+            <nav class="gnb">
+                <div class="gnb_wrap">
+                    <div class="gnb_logo"><span class="blind">reon</span></div><!--모바일로고-->
+                    <ul class="depth1">
+                         <!--pc에서 메뉴가 열리면 class="over"추가(over)-->
+                         <!--모바일에서 li 오버하면=> class="open"추가(open)-->
+                        <li>
+                            <a href="#n"><span>트레이딩</span></a>
+                            <ul class="depth2">
+                                <li><a href="#n"><span>국내주식</span></a></li>
+                                <li><a href="#n"><span>해외주식</span></a></li>
+                                <li><a href="#n"><span>주문/정정/취소</span></a></li>
+                                <li><a href="#n"><span>체결·잔고</span></a></li>
+                                <li><a href="#n"><span>거래내역 조회</span></a></li>
+                                <li><a href="#n"><span>입출금·이체</span></a></li>
+                                <li><a href="#n"><span>해외선물/옵션</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#n"><span>투자상품</span></a>
+                            <ul class="depth2">
+                                <li><a href="#n"><span>펀드상품</span></a></li>
+                                <li><a href="#n"><span>ELS/DLS</span></a></li>
+                                <li><a href="#n"><span>리츠상품</span></a></li>
+                                <li><a href="#n"><span>ISA상품</span></a></li>
+                                <li><a href="#n"><span>CMA상품</span></a></li>
+                                <li><a href="#n"><span>연금상품</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#n"><span>리서치센터</span></a>
+                            <ul class="depth2">
+                                <li><a href="#n"><span>일간/주간 리포트</span></a></li>
+                                <li><a href="#n"><span>기업분석</span></a></li>
+                                <li><a href="#n"><span>산업분석</span></a></li>
+                                <li><a href="#n"><span>글로벌전략</span></a></li>
+                                <li><a href="#n"><span>뉴스/공시</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#n"><span>계좌·고객센터</span></a>
+                            <ul class="depth2">
+                                <li><a href="#n"><span>계좌개설</span></a></li>
+                                <li><a href="#n"><span>인증센터/OTP</span></a></li>
+                                <li><a href="#n"><span>증명서 발급</span></a></li>
+                                <li><a href="#n"><span>개인정보 변경</span></a></li>
+                                <li><a href="#n"><span>민원/전자민원</span></a></li>
+                                <li><a href="#n"><span>보안센터</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#n"><span>회사소개</span></a>
+                            <ul class="depth2">
+                                <li><a href="#n"><span>회사소개</span></a></li>
+                                <li><a href="#n"><span>브랜드스토리</span></a></li>
+                                <li><a href="#n"><span>공지사항</span></a></li>
+                                <li><a href="#n"><span>IR</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="gnb_close"><span class="blind">메뉴닫기</span></button>
+                </div><!--gnb_wrap-->
+                <div class="gnb_bg"></div><!--메뉴배경-->
+            </nav><!--gnb-->
+            <div class="util">
+                <a href="mypage.html" class="mypage"><span class="blind">마이페이지</span></a>
+                <button type="button" class="allmenu"><span class="blind">전체메뉴열기</span></button>
+            </div>
+        </header>
+    <!--main_pop :시작-->
+        <div class="container">
+            <section class="main_pop">
+                <div class="wrapper">
+                    <div class="popup">
+                        <h2 class="blind">팝업</h2>
+                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                            <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                                <li class="swiper-slide pop1">
+                                    <h3>해외주식 투자,<br>  
+                                        이제 더 쉽게 시작하세요</h3>
+                                    <p>미국·중국·일본 등 글로벌 시장 정보를<br>
+                                        한눈에 확인하고 간편하게 매수할 수 있습니다.</p>
+                                    <p>※ 환율 변동 및 시장 변동성에 따라 손실이 발생할 수 있습니다.
+                                        이제 더 쉽게 시작하세요</p>
+                                    <a href="#n">자세히보기</a>
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                                <li class="swiper-slide pop2">
+                                    <h3>처음 하는 투자,
+                                         ETF로 더 쉽고 안전하게</h3>
+                                    <p>다양한 자산에 분산투자되는 ETF로<br>
+                                         리스크는 줄이고 안정적인 성장에 도전하세요.</p> 
+                                    <p>※ 투자 전 상품설명서를 꼭 읽어보세요.</p>
+                                    <a href="#n">자세히보기</a>
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                            </ul>
+                        </div>
+                        <div class="btn_wrap">
+                            <button class="btn_stop"><span class="blind">일시정지</span></button>
+                            <button class="btn_play"><span class="blind">재생버튼</span></button>
+                        </div>
+                        <div class="scrollbar"></div>
+                    </div>
+                    <div class="inner">
+                        <div class="event">
+                            <h2>이벤트</h2>
+                            <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                                    <li class="swiper-slide pop1">
+                                        <h3>대신증권<br> 
+                                            신용이자<br>
+                                            ZERO 혜택안내</h3>
+                                        <p>신용거래 이자율 0% <br> 
+                                            혜택을 확안하세요</p>
+                                    </li> 
+                                    <li class="swiper-slide pop2">
+                                        <h3>11월<br>  
+                                            국내주식 <br> 
+                                            거래이벤트</h3>
+                                        <p>신용거래 이자율 0% <br> 
+                                            혜택을 확안하세요</p>
+                                    </li> 
+                                    <li class="swiper-slide pop2">
+                                        <h3>대신증권<br> 
+                                            주주 <br>
+                                            감사 이벤트</h3>
+                                        <p>신용거래 이자율 0% <br> 
+                                            혜택을 확안하세요</p>
+                                    </li> 
+                                </ul>
+                                <div class="btn_wrap">
+                                    <button class="btn_prev"><span class="blind">이전팝업</span></button>
+                                    <button class="btn_next"><span class="blind">다음팝업</span></button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="creon">
+                               <h3>CREON</h3>
+                               <p>빠르고 안정적인<br> 
+                                온라인 투자 플랫폼 </p>
+                        </div>
+                    </div>
+                </div>
+            </section><!--main_pop-->
+
+            <section class="service">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>자주 찾는 서비스</h2>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li class="ico1">
+                                <a href="#">
+                                    <span>계좌개설</span>
+                                </a>
+                            </li>
+                            <li class="ico2">
+                                <a href="#">
+                                    <span>잔고/거래내역</span>
+                                </a>
+                            </li>
+                            <li class="ico3">
+                                <a href="#">
+                                    <span>관심종목</span>
+                                </a>
+                            </li>
+                            <li class="ico4">
+                                <a href="#">
+                                    <span>투자상품</span>
+                                </a>
+                            </li>
+                            <li class="ico5">
+                                <a href="#">
+                                    <span>해외주식</span>
+                                </a>
+                            </li>
+                            <li class="ico6">
+                                <a href="#">
+                                    <span>신용/대출</span>
+                                </a>
+                            </li>
+                            <li class="ico7">
+                                <a href="#">
+                                    <span>이벤트</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+         <!--product :시작-->
+            <section class="product">
+                <div class="wrapper">
+                    <h2>대표 상품을 소개합니다</h2>
+                    <div class="tab">
+                          <ul>
+                            <li class="active">
+                                <button>펀드</button>
+                            </li>
+                            <li><button>ELS/DLS</button></li>
+                            <li><button>ISA</button></li>
+                          </ul>
+                    </div> 
+                    <div class="list">
+                        <ul>
+                             <li class="pro01">
+                                   <a href="#">
+                                         <div class="tit">
+                                              <h3>투자성향 적합 펀드</h3>
+                                              <p>투자성향(안정형·중립형·공격형)에 따라 자동 매칭되는 베스트 펀드</p>
+                                         </div>
+                                         <span class="more">자세히 보기</span>
+                                   </a>
+                             </li>
+                             <li class="pro02">
+                                <a href="#">
+                                      <div class="tit">
+                                           <h3>테마펀드(반도체·AI·2차전지)</h3>
+                                           <p>MZ세대에서  제일 많이 가입하는 인기 테마 위주 펀드</p>
+                                      </div>
+                                      <span class="more">자세히 보기</span>
+                                </a>
+                          </li>
+                          <li class="pro03">
+                            <a href="#">
+                                  <div class="tit">
+                                       <h3>펀드랭킹 TOP10</h3>
+                                       <p>최근 수익률·순자산 기준으로 상위만 모아둔 판매량 상위 상품</p>
+                                  </div>
+                                  <span class="more">자세히 보기</span>
+                            </a>
+                      </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+         <!--ranking :시작-->
+            <section class="ranking">
+                <div class="wrapper">
+                    <div class = "tit">
+                         <h2>현재 펀드<br class="pc_only"> 랭킹 TOP</h2>
+                         <div class="tab">
+                            <ul>
+                                <li class="active">
+                                    <button>
+                                        <span class="pc_only">수익률이 뚜렷한 펀드</span>
+                                        <span class="mo_only">수익률</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <span class="pc_only">안정성높은 규모 펀드</span>
+                                        <span class="mo_only">안정성</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <span class="pc_only">단일 국가별 펀드</span>
+                                        <span class="mo_only">국가별</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        <span class="pc_only">운용사 베스트 펀드</span>
+                                        <span class="mo_only">운용사</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div><!--tab--> 
+                    </div><!--tit--> 
+
+                    <div class="list">
+                        <ul>
+                            <li class="rank01">
+                                <a href="#">
+                                    <div class="writing">
+                                        <strong>매우 높은 위험</strong>
+                                        <h3>미래에셋코어테크증권자투자신탁</h3>
+                                        <p>(수수료선취-온라인)</p>
+                                    </div>
+                                    <div class="percent">
+                                        <div class="photo"><img src="images/rank01.jpg" alt=""></div>
+                                        <div class="profits">
+                                            <p>수익률</p>
+                                            <h3>47.93%</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="rank02">
+                                <a href="#">
+                                    <div class="writing">
+                                        <strong>높은위험</strong>
+                                        <h3>미래에셋코어테크청년소득공제증권자투자신탁주식Ae</h3>
+                                        <p>(수수료선취-온라인)</p>
+                                    </div>
+                                    <div class="percent">
+                                        <div class="photo"><img src="images/rank01.jpg" alt=""></div>
+                                        <div class="profits">
+                                            <p>수익률</p>
+                                            <h3>47.89%</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="rank03">
+                                <a href="#">
+                                    <div class="writing">
+                                        <strong>높은 위험</strong>
+                                        <h3>하나IT코리아증권자투자신탁</h3>
+                                        <p>(수수료 - 선취 -온라인)</p>
+                                    </div>
+                                    <div class="percent">
+                                        <div class="photo"><img src="images/rank01.jpg" alt=""></div>
+                                        <div class="profits">
+                                            <p>수익률</p>
+                                            <h3>40.22%</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="rank04">
+                                <a href="#">
+                                    <div class="writing">
+                                        <strong> 높은 위험</strong>
+                                        <h3>미래에셋투자신탁</h3>
+                                        <p>(수수료 - 선취 -온라인)</p>
+                                    </div>
+                                    <div class="percent">
+                                        <div class="photo"><img src="images/rank01.jpg" alt=""></div>
+                                        <div class="profits">
+                                            <p>수익률</p>
+                                            <h3>34.54%</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!--wrapper-->
+            </section><!--ranking-->
+         <!--benefit :시작-->
+            <section class="benefit">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2><span>혜택과 이벤트</span></h2>
+                    </div>
+                    <div class="list">
+                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                            <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/benefit01.jpg" alt=""></div>
+                                        <div class="txt">
+                                            <h3>주식 수수료 우대 이벤트</h3>
+                                            <p>2025-07-14 ~ 2025-12-31</p>
+                                        </div>
+                                    </a>
+                                </li> 
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/benefit02.jpg" alt=""></div>
+                                        <div class="txt">
+                                            <h3>TDF/디딤펀드 순매수 이벤트</h3>
+                                            <p>2025-10-20 ~ 2025-12-31</p>
+                                        </div>
+                                    </a>
+                                </li> 
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/benefit03.jpg" alt=""></div>
+                                        <div class="txt">
+                                            <h3>ETF 3종 거래 이벤트</h3>
+                                            <p>2025-10-01 ~ 2025-12-30</p>
+                                        </div>
+                                    </a>
+                                </li> 
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/benefit04.jpg" alt=""></div>
+                                        <div class="txt">
+                                            <h3>주식 수수료 우대 이벤트</h3>
+                                            <p>2025-07-14 ~ 2025-12-31</p>  
+                                        </div>
+                                    </a>
+                                </li> 
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/benefit05.jpg" alt=""></div>
+                                        <div class="txt">
+                                            <h3>미국주식 고배당 10선</h3>
+                                            <p>2025-10-01 ~ 2025-12-30</p>
+                                        </div>
+                                    </a>
+                                </li> 
+                            </ul>
+                        </div><!--swiper-->
+                    </div><!--list-->
+                    <div class="ctrl_btn">
+                        <button class="btn_prev"><span class="blind">이전팝업보기</span></button>
+                        <button class="btn_next"><span class="blind">다음팝업보기</span></button>
+                    </div>
+                    <div class="more"><a href="#n"><span class="pc_only">더보기</span></a></div>
+                </div><!--wrapper-->
+            </section>
+
+         <!--news :시작-->
+            <section class="news">
+                <div class="wrapper">
+                    <h2>공지사항</h2>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#n">
+                                    <h3>금융서비스 일시 중단 안내</h3>
+                                    <p>2025-11-21</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <h3>HD현대미포 주식선물 시장조치 예정 안내</h3>
+                                    <p>2025-11-19</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <h3>휴일 시스템 점검에 따른 고객서비스 안내</h3>
+                                    <p>2025-11-19</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <h3>넷플릭스(NFLX) 주식분할 안내</h3>
+                                    <p>2025-11-17</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more"><a href="#n"><span>더보기</span></a></div>
+                </div><!--wrapper-->
+            </section><!--news-->
+
+         <!--mission :시작-->
+            <section class="mission">
+                <h2><span class="blind">회사소개</span></h2>
+                <div class="wrapper">
+                    <div class="txt">
+                        <strong>Creon Mission</strong>
+                        <h3>CREON은 투자자에게<br> 
+                            가장 합리적인 투자 파트너가 되겠습니다</h3>
+                        <a href="#n"><span class="more">자세히보기</span></a>
+                    </div>
+                </div>
+            </section>
+        </div><!--container-->
+
+
+        <footer>
+            <div class="wrapper">
+                <div class="f_logo"><span class="blind">크레온</span></div>
+                <div class="inner">
+                    <div class="f_nav">                                                 
+                        <ul>
+                            <li><a href="#n">인증센터</a></li>
+                            <li><a href="#n">스마트폰 공동인증서</a></li>
+                            <li><a href="#n">CREON Plus(API)</a></li>
+                            <li><a href="#n">대신 ETN</a></li>
+                            <li><a href="#n">금융소비자정보포털</a></li>
+                        </ul>
+                    </div>
+                    <div class="f_info">
+                        <span>대신증권(주)</span>
+                        <address>서울특별시 종로구 우정국로 26 센트로폴리스 A동</address>
+                        <span>사업자번호:  116-81-09076</span>
+                        <span>대표이사: 오익근</span>
+                        <span>대신증권 준법감시인 심사필 제 2025-0285호</span>
+                    </div>
+                    <div class="copyright">©COPYRIGHT(C) CREONTRADE.COM ALL RIGHTS RESERVED</div>
+                    <ul class="law">
+                        <li>-투자자는 금융투자상품에 대하여 증권사로부터 충분한 설명을 받을 권리가 있으며, 투자전 상품설명서 및 약관 등을 반드시 읽어보시기 바랍니다.</li>
+                        <li>-이 금융투자상품은 예금자보호법에 따라 보호되지 않습니다.</li>
+                        <li>-금융투자상품은 투자원금의 손실이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</li>
+                        <li>-금융투자상품별 유의사항은 각 상품별 안내에서 확인하시기 바랍니다.</li>
+                    </ul>
+                </div><!--inner-->
+                <div class="family_site">
+                    <!--
+                        열기버튼을 클릭하면 family_site, close 보이고 open은 사라짐
+                        닫기버튼을 클릭하면 family_site, close 사라지고 open은 나타남
+                        family_site에 open 클래스를 줌 (열렸을때)
+                    -->
+                    <button class="family_open" title="열기"><span>family site</span></button>
+                    <div class="family_wrap">
+                        <ul>
+                            <li><a href="#n"><span>대신파이낸셜그룹</span></a></li>
+                            <li><a href="#n"><span>대신저축은행</span></a></li>
+                            <li><a href="#n"><span>대신자산신탁</span></a></li>
+                            <li><a href="#n"><span>대신자산운용</span></a></li>
+                            <li><a href="#n"><span>대신저축은행</span></a></li>
+                            <li><a href="#n"><span>대신에이엠씨</span></a></li> 
+                            <li><a href="#n"><span>대신경제연구소</span></a></li> 
+                        </ul>
+                    </div>
+                    <button class="family_close" title="닫기"><span>family_site</span></button>
+                </div><!--family_site-->
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
