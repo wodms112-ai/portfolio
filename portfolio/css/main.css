@@ -1,0 +1,26 @@
+@import url(common.css);
+@import url(default.css);
+@import url(fonts.css);
+.visual {
+    background: url(../images/visual01.jpg) no-repeat center / cover;
+    color: #fff;
+}
+.visual .head {
+    position: absolute;
+    display: flex;
+}
+
+
+
+.profile {
+
+}
+.project01 {
+    background-color: #667D9D;
+}
+.project02 {
+    background-color: #162550;
+}
+.thanks {
+    
+}
