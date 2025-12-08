@@ -5,6 +5,8 @@
     --header-h : 100px;
     --wrapper-margin : 30px;
 
+    --font-w-bold :700;
+
 }
 
 html {
@@ -30,7 +32,7 @@ body {
 }
 
 #wrap {
-    /* min-width: 1320px;  */
+    min-width: 1320px; 
     /* 1260+30+30=1320 (최소 넓이주기) */
     position: relative; /*wrap을 기준으로 header를 정렬하기위해서*/
     /* overflow: hidden; hidden이 있으면 sticky기능이 안됨 */
@@ -61,12 +63,6 @@ blind 클래스를 주면 사라짐*/
 
 
         */
-@media screen and (max-width:1320px){ /*pc버전일때 좌우여백30이면13020에서 wrapper풀어줌*/
-    .wrapper {
-        width: auto;
-        margin: 0 var(--wrapper-margin); /*가운데 정렬*/
-    }
-}
 
 .mo_only { /*모바일에서만 보이는 애들*/
     display: none;
