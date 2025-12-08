@@ -23,6 +23,7 @@ body {
     color: var(--color-font);
     word-break: keep-all; /*단어별로 줄바꿈*/
     word-wrap: break-word; /*단어가 너무 길었을 때 강제 줄바꿈*/
+    overflow: hidden;
 }
 
 @media screen and (max-width:768px){ 
@@ -32,7 +33,7 @@ body {
 }
 
 #wrap {
-    min-width: 1320px; 
+    min-width: 1340px; 
     /* 1260+30+30=1320 (최소 넓이주기) */
     position: relative; /*wrap을 기준으로 header를 정렬하기위해서*/
     /* overflow: hidden; hidden이 있으면 sticky기능이 안됨 */
@@ -67,11 +68,7 @@ blind 클래스를 주면 사라짐*/
 .mo_only { /*모바일에서만 보이는 애들*/
     display: none;
 }
-@media screen and (max-width:769px){
-    .mo_only { /*모바일에서만 보이는 애들*/
-        display: block;
-    }
-}
+
 ::selection {
     background-color: var(--color-main);
     color: #fff;

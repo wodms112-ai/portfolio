@@ -19,7 +19,7 @@ header .gnb ul {
     font-size: 24px;
 }
 header .gnb ul li {
-    width: 200px;
+    width: 274px;
 }
 header .gnb ul li a {
     display: block;
@@ -33,7 +33,7 @@ header .gnb ul li.active a span {
     background: #000;        /* 타원 배경 */
     color: #fff;
     border-radius: 50%;   /* 알약 모양 */
-    padding: 14px 50px;      /* 크기 조절 */
+    padding: 14px 70px;      /* 크기 조절 */
 }
 
         /************header에 dark가 추가될때***********/

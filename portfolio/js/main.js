@@ -1,37 +1,58 @@
-$(document).ready(function(){
-    const myFullpage = new fullpage('#fullpage', {  /* html에서 페이지 전체를 감싸는 요소 */
+$(document).ready(function () {
+    const myFullpage = new fullpage('#fullpage', {
 
-		navigation: false, /* 오른쪽에 각 페이지의 paging */
-		navigationPosition: 'right', /* 위치 */
-		navigationTooltips: ['첫번째', '두번째', '세번째', '네번째'], /* 툴팁 */
-		showActiveTooltip: true, /* 현재 활성화된 페이지의 툴팁에 특정 클래스 주기 */
-		
-		lockAnchors: false,
-		anchors: ['link1', 'link2', 'link3', 'link4'], /* href="#link1" 이렇게 코딩하면 해당 링크명으로 이동 */
+        navigation: false,
+        navigationPosition: 'right',
+        navigationTooltips: ['첫번째', '두번째', '세번째', '네번째'],
+        showActiveTooltip: true,
 
-		autoScrolling:true, /* 한페이지씩 스크롤 */
-		scrollHorizontally: true,
+        lockAnchors: false,
+        anchors: ['link1', 'link2', 'link3', 'link4', 'link5'], // 섹션 5개니까 5개로 맞춰줘도 좋아!
 
-		verticalCentered: true, /* 컨텐츠 요소 위아래 가운데 */
-		
-		scrollOverflow: false, /* 컨텐츠가 넘쳐도 스크롤 금지 */
+        autoScrolling: true,
+        scrollHorizontally: true,
+        verticalCentered: true,
+        scrollOverflow: false,
 
-		afterLoad: function(origin, destination, direction, trigger){
-			if(destination.index == 0){ /* index가 2면 슬라이드는 세번째 슬라이드입니다. index 수는 0/1/2/3 */
-				console.log('1번째 슬라이드가 로딩 되었을때');
-				$('header .gnb ul').hide()
-				
-			}else if(destination.index == 4){ /* index가 2면 슬라이드는 세번째 슬라이드입니다. index 수는 0/1/2/3 */
-				console.log('4번째 슬라이드가 로딩 되었을때');
-				$('header .gnb ul').hide()
-			}else {
-				console.log('기타등등')
-				$('header .gnb ul').show()
-				$('header').addClass('dark')
-			}
-		},
+        afterLoad: function (origin, destination, direction, trigger) {
+            const idx   = destination.index;           // 0~4
+            const $head = $('header');
+            const $gnbU = $('header .gnb ul');
+            const $gnbL = $('header .gnb li');
 
-		responsiveWidth: 640 /* fullpage를 적용시키지 않을 모바일 사이즈 */
-	});
+            // 공통 초기화
+            $head.removeClass('dark');
+            $gnbU.show();
+            $gnbL.removeClass('active');
 
-})//맨끝
+            // 1번(visual) & 5번(thanks) : 헤더 메뉴 숨김
+            if (idx === 0 || idx === 4) {
+                console.log((idx + 1) + '번째 섹션 - gnb 숨김');
+                $gnbU.hide();
+                return; // 여기서 끝
+            }
+
+            // 2번(profile)
+            if (idx === 1) {
+                console.log('2번째 섹션 - profile active');
+                $gnbL.eq(0).addClass('active');
+            }
+
+            // 3번(project01)
+            else if (idx === 2) {
+                console.log('3번째 섹션 - 1st project active + dark');
+                $head.addClass('dark');
+                $gnbL.eq(1).addClass('active');
+            }
+
+            // 4번(project02)
+            else if (idx === 3) {
+                console.log('4번째 섹션 - 2nd project active + dark');
+                $head.addClass('dark');
+                $gnbL.eq(2).addClass('active');
+            }
+        },
+
+        responsiveWidth: 640
+    });
+});
