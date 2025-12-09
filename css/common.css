@@ -1,0 +1,52 @@
+/* 공통 변수 */
+:root {
+    --color-font: #080808;
+    --color-white: #fff;
+    --header-h: 100px;
+    --wrapper-margin: 30px;
+    --font-w-bold: 700;
+}
+
+/* HTML, BODY 설정 */
+html {
+    font-size: 17px;
+}
+
+body {
+    font-family: "pre", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-font);
+    word-break: keep-all;
+    word-wrap: break-word;
+
+    /* ★ 가로스크롤 허용 */
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+/* 전체 wrap */
+#wrap {
+    /* ★ 이 값을 키우면 PC 기준 최소 넓이가 늘어남 */
+    min-width: 1600px;  /* ← 원하는 숫자로 변경 가능! */
+
+    position: relative;
+    /* overflow: hidden; 금지 (스크롤 막힘) */
+}
+
+/* 시각적으로 숨기는 텍스트 */
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* 가운데 정렬 wrapper */
+.wrapper {
+    width: 1400px; /* ← wrap보다 조금 작게 설정하면 안정적 */
+    margin: 0 auto;
+}
