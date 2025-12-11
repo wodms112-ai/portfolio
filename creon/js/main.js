@@ -126,10 +126,10 @@ $('.main_pop .popup .btn_wrap .btn_play').on('click' , function(){
 })
 const event_swiper = new Swiper('.main_pop .inner .event .swiper', { /* 팝업을 감싼는 요소의 class명 */
 
-	// autoplay: {  /* 팝업 자동 실행 */
-	// 	delay: 2500,
-	// 	disableOnInteraction: true,
-	// },
+        autoplay: {  /* 팝업 자동 실행 */
+            delay: 2000,
+            disableOnInteraction: true,
+        },
 
 	//effect: "fade", /* fade 효과 */
 
